@@ -1,4 +1,4 @@
-// import "../src/style.css"
+import "../src/style.css"
 
 const TaskListContainer = document.querySelector('.todo-Container');
 
