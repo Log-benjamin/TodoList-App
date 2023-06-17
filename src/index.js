@@ -78,9 +78,7 @@ TaskListContainer.addEventListener('click', (e) => {
 
 clearcompleteTasks.addEventListener('click', (e) => {
   cleartasksDone(e);
-  setTimeout(() => {
-    document.location.reload();
-  }, 0.0005);
+  window.location.reload();
 });
 
 window.addEventListener('load', () => {
