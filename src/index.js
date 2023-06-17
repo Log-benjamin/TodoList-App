@@ -71,7 +71,6 @@ TaskListContainer.addEventListener('click', (e) => {
       };
     }
   }
-
   if (e.target.className === 'checkB') {
     checkbuttonClicked(e);
   }
@@ -79,6 +78,9 @@ TaskListContainer.addEventListener('click', (e) => {
 
 clearcompleteTasks.addEventListener('click', (e) => {
   cleartasksDone(e);
+  setTimeout(() => {
+    document.location.reload();
+  }, 0.0005);
 });
 
 window.addEventListener('load', () => {

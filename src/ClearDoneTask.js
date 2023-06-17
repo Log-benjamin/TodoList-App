@@ -33,8 +33,6 @@ export function cleartasksDone(e) {
     Q += 1;
   }
 
-  localStorage.setItem('TasksInfo', JSON.stringify(tempStore));
-  tempStore = storageInfo();
   const listHolder = e.target.parentElement.children[3].children;
 
   for (let i = 0; i < listHolder.length; i += 1) {
@@ -43,6 +41,9 @@ export function cleartasksDone(e) {
       innerlistHolder.parentElement.parentElement.remove();
     }
   }
+
+  localStorage.setItem('TasksInfo', JSON.stringify(tempStore));
+  tempStore = storageInfo();
 
   for (let i = 0; i < tempStore.length; i += 1) {
     listHolder[i].id = tempStore[i].id;
